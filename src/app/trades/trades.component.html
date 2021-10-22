@@ -1,0 +1,41 @@
+<form class="example-form" [formGroup]="addForm">
+  <div class="form-group-row mt-12">
+
+    <div class="addButton">
+      <button type="submit" class="btn btn-primary" (click)="addButton()">Add</button>
+    </div>
+
+    <div class="select-option">
+      <div class="select-container">
+        <label>Entry date</label>
+        <input type="date" placeholder="Entry date" formControlName="entryDate" />
+      </div>
+    </div>
+
+    <div class="select-option">
+      <div class="select-container">
+        <label>Entry Price</label>
+        <input placeholder="0" type="number" min="0" id="entryPrice" formControlName="entryPrice" />
+      </div>
+    </div>
+
+    <div class="select-option">
+      <div class="select-container">
+        <label>Exit Date</label>
+        <input type="date" placeholder="Exit Date" formControlName="exitDate" />
+      </div>
+    </div>
+
+    <div class="select-option">
+      <div class="select-container">
+        <label>Exit Price</label>
+        <input type="number" placeholder="0" min="0" formControlName="exitPrice" />
+      </div>
+    </div>
+
+    <div class="addButtonFooter">
+      <button type="submit" class="btn btn-primary" (click)="addButton()">Add</button>
+    </div>
+
+  </div>
+</form>

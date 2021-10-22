@@ -1,0 +1,36 @@
+.table-container {
+  width: 75%;
+  position: relative;
+  top: 50px;
+  margin: auto;
+  height: auto;
+  box-shadow: 12px 12px 9px -3px #ccc;
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  height: auto;
+}
+
+input{
+  width: 100%;
+}
+
+.results > td {
+  border-left: solid #ccc 1px;
+  text-align: center;
+}
+
+tr{
+  height: 50px;
+  border-bottom: solid #ccc 1px;
+}
+
+.editButton{
+  width: 70%;
+}
+
+.editButton button {
+  width: 30%;
+}
