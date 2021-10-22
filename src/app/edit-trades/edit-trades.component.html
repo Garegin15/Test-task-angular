@@ -1,30 +1,30 @@
-  <div class="table-container">
-    <div class="editButton">
-      <!-- <button *ngIf="buttonText === 'Edit Trades'" type="submit" class="btn btn-primary" (click)="editClick()">Edit Trades</button> -->
-      <!-- <button *ngIf="buttonText === 'Save'" type="submit" class="btn btn-primary" (click)="onSave()">Save</button> -->
-    </div>
-    <table>
-      <tr>
-        <th>Entry date</th>
-        <th>Entry price</th>
-        <th>Exit Date</th>
-        <th>Exit price</th>
-        <th>Profit</th>
-      </tr>
-
-      <tr class="results" *ngFor="let data of formValue; let i = index">
-        <td><input [(ngModel)]="data.entryDate" type="date" [disabled]="data.isDisabled" value="{{data?.entryDate}}" /></td>
-        <td><input [(ngModel)]="data.entryPrice"  type="number" [disabled]="data.isDisabled" value="{{data?.entryPrice}}" /></td>
-        <td><input [(ngModel)]="data.exitDate" type="date" [disabled]="data.isDisabled" value="{{data?.exitDate}}" /></td>
-        <td><input [(ngModel)]="data.exitPrice" type="number" [disabled]="data.isDisabled" value="{{data?.exitPrice}}" /></td>
-        <td>
-          {{getProfit(data?.exitPrice, data?.entryPrice)}}$<b> in </b>{{getDatePeriod(data?.exitDate, data?.entryDate)}} <b>days</b>
-        </td>
-        <td>
-          <button *ngIf="data.isDisabled" type="submit" class="btn btn" (click)="editClick(i)" >Edit Trades</button>
-          <button *ngIf="!data.isDisabled" type="submit" class="btn btn" (click)="onSave(i)">Save</button>
-        </td>
-      </tr>
-
-    </table>
+<div class="table-container">
+  <div class="editButton">
   </div>
+  <table>
+    <tr>
+      <th>Entry date</th>
+      <th>Entry price</th>
+      <th>Exit Date</th>
+      <th>Exit price</th>
+      <th>Profit</th>
+    </tr>
+    <tr class="results" *ngFor="let data of formValue; let i = index">
+      <td><input [(ngModel)]="data.entryDate" type="date" [disabled]="data.isDisabled" value="{{data?.entryDate}}" />
+      </td>
+      <td><input [(ngModel)]="data.entryPrice" type="number" [disabled]="data.isDisabled"
+          value="{{data?.entryPrice}}" /></td>
+      <td><input [(ngModel)]="data.exitDate" type="date" [disabled]="data.isDisabled" value="{{data?.exitDate}}" /></td>
+      <td><input [(ngModel)]="data.exitPrice" type="number" [disabled]="data.isDisabled" value="{{data?.exitPrice}}" />
+      </td>
+      <td>
+        {{getProfit(data?.exitPrice, data?.entryPrice)}}$<b> in </b>{{getDatePeriod(data?.exitDate, data?.entryDate)}}
+        <b>days</b>
+      </td>
+      <td>
+        <button *ngIf="data.isDisabled" type="submit" class="btn btn-primary" (click)="editClick(i)">Edit</button>
+        <button *ngIf="!data.isDisabled" type="submit" class="btn btn-primary" (click)="onSave(i)">Save</button>
+      </td>
+    </tr>
+  </table>
+</div>

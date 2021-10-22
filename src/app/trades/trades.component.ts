@@ -19,10 +19,10 @@ export class TradesComponent implements OnInit {
 
   ngOnInit(): void {
     this.addForm = new FormGroup({
-      entryDate: new FormControl(null, []),
-      entryPrice: new FormControl(null, [Validators.min(5), Validators.max(10)]),
-      exitDate: new FormControl(null, []),
-      exitPrice: new FormControl(null, []),
+      entryDate: new FormControl(null, [Validators.required]),
+      entryPrice: new FormControl(null, [Validators.required]),
+      exitDate: new FormControl(null, [Validators.required]),
+      exitPrice: new FormControl(null, [Validators.required]),
       isDisabled: new FormControl(true, [])
     });
   }

@@ -1,10 +1,6 @@
 <form class="example-form" [formGroup]="addForm">
   <div class="form-group-row mt-12">
 
-    <div class="addButton">
-      <button type="submit" class="btn btn-primary" (click)="addButton()">Add</button>
-    </div>
-
     <div class="select-option">
       <div class="select-container">
         <label>Entry date</label>
@@ -15,7 +11,7 @@
     <div class="select-option">
       <div class="select-container">
         <label>Entry Price</label>
-        <input placeholder="0" type="number" min="0" id="entryPrice" formControlName="entryPrice" />
+        <input placeholder="0" type="number" min="0" formControlName="entryPrice" />
       </div>
     </div>
 
@@ -34,7 +30,7 @@
     </div>
 
     <div class="addButtonFooter">
-      <button type="submit" class="btn btn-primary" (click)="addButton()">Add</button>
+      <button type="submit" class="btn btn-primary"  (click)="addButton()" [disabled]="addForm.invalid">Add</button>
     </div>
 
   </div>

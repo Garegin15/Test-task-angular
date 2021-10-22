@@ -32,10 +32,9 @@ export class EditTradesComponent implements OnInit {
     localStorage.setItem("form-data",JSON.stringify(this.formValue));
     const updateTrades = JSON.parse(localStorage.getItem("form-data") || "")
     updateTrades[i].isDisabled = true
-    this.formValue[i].isDisabled = !this.formValue[i].isDisabled
+    this.formValue[i].isDisabled = true
 
     localStorage.setItem("form-data",JSON.stringify(updateTrades));
-
   }
 
 }
